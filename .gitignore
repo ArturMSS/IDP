@@ -52,8 +52,4 @@ desktop.ini
 *.ppt
 *.pptx
 
-# Ignorar arquivos de banco de dados
-*.db
-*.sqlite
-*.sql
-*.dump
+
