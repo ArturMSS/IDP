@@ -1,0 +1,14 @@
+{
+    "java.project.sourcePaths": [
+        "2025.1/Poo/password/src",
+        "2025.1/Poo/pallindrome/src",
+        "2025.1/Poo/median/src",
+        "2025.1/Poo/heart/src",
+        "2025.1/Poo/fibonacci/src",
+        "2025.1/Poo/elephant/src",
+        "2025.1/Poo/collatz/src",
+        "2025.1/Poo/area/src",
+        "2025.1/Poo/IMC/src",
+        "2025.1/Poo/health/src"
+    ]
+}
