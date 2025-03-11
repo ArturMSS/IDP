@@ -1,6 +1,0 @@
-{
-    "files.associations": {
-        "*.c": "c",           // Associate .c files with C language
-        "*.h": "c",           // Associate .h files with C language (header files)
-    }
-}
