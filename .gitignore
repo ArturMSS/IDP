@@ -52,4 +52,6 @@ desktop.ini
 *.ppt
 *.pptx
 
+# Ignorar arquivos sem extensão (geralmente binários)
+*.[!a-z]*
 
