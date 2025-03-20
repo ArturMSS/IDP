@@ -1,0 +1,67 @@
+# Ignorar arquivos de configuração local e IDE
+.vscode/
+.idea/
+*.iml
+
+# Ignorar arquivos de ambiente e dependências
+node_modules/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.class
+*.jar
+*.war
+*.ear
+*.tmp
+*.swp
+*.swo
+*.env
+*.venv/
+venv/
+env/
+bin/
+obj/
+build/
+dist/
+
+# Ignorar executáveis gerados (C/C++)
+*.exe
+*.out
+
+# Ignorar arquivos de sistema e cache
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Ignorar arquivos de log e backup
+*.log
+*.bak
+*.backup
+
+# Ignorar arquivos grandes ou desnecessários
+*.zip
+*.tar
+*.gz
+*.7z
+*.rar
+
+# Ignorar arquivos do Office, caso você não queira armazená-los
+# Remova as linhas abaixo se você quer manter arquivos de relatórios ou apresentações
+*.pdf
+*.doc
+*.docx
+*.xls
+*.xlsx
+*.ppt
+*.pptx
+
+# Ignorar arquivos sem extensão que sejam puramente binários (Cuidado ao usar!)
+*.
+
+# Permitir arquivos importantes que possam ter sido ignorados
+!*.cpp
+!*.h
+!*.c
+!*.json
+
