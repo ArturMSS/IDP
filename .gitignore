@@ -56,12 +56,6 @@ desktop.ini
 *.ppt
 *.pptx
 
-# Ignorar arquivos sem extensão que sejam puramente binários (Cuidado ao usar!)
-*.
-
-# Permitir arquivos importantes que possam ter sido ignorados
-!*.cpp
-!*.h
-!*.c
-!*.json
+# Compiled class file
+*.class
 
