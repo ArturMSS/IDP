@@ -13,7 +13,6 @@ __pycache__/
 *.jar
 *.war
 *.ear
-*.log
 *.tmp
 *.swp
 *.swo
@@ -25,6 +24,8 @@ bin/
 obj/
 build/
 dist/
+
+# Ignorar executáveis gerados (C/C++)
 *.exe
 *.out
 
@@ -44,6 +45,9 @@ desktop.ini
 *.gz
 *.7z
 *.rar
+
+# Ignorar arquivos do Office, caso você não queira armazená-los
+# Remova as linhas abaixo se você quer manter arquivos de relatórios ou apresentações
 *.pdf
 *.doc
 *.docx
