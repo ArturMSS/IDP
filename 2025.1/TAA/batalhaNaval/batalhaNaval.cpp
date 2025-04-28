@@ -15,13 +15,15 @@ int main() {
     long long N, Q, M, val;
     cin >> N >> M >> Q;
 
-    map<long long, coordenadas> posicoes;
+    unordered_map<long long, coordenadas> posicoes;
+    posicoes.reserve(N*M);
 
     for (long long i = 0; i < N; i++) {
         for (long long j = 0; j < M; j++) {
             cin >> val;
-            posicoes[val] = coordenadas(i, j);
-            
+            if (posicoes.find(val) == posicoes.end()) {
+                posicoes[val] = coordenadas(i, j);
+            }
         }
     }
 

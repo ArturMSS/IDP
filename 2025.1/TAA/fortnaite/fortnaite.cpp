@@ -5,29 +5,39 @@ struct jogador{
     string nick;
     string tempo;
     int tempoSeg;
-    jogador(string n, string t){
-        nick = n;
-        tempo = t;
-        int min = (t[0] - '0') * 10 + (t[1] - '0');
-        int seg = (t[3] - '0') * 10 + (t[4] - '0');
-        tempoSeg = min * 60 + seg;        
-    }
 };
-bool compararTempo(const jogador &a, const jogador &b) {
-    return a.tempo > b.tempo;
-}
 
+bool compararTempo(const jogador& a, const jogador& b){
+    if(a.tempoSeg != b.tempoSeg){
+        if(a.tempoSeg > b.tempoSeg){
+            return true;
+        }else{
+            return false;
+        }
+    } else{
+        if (a.nick > b.nick){
+            return true;
+        }else{
+            return false;
+        }
+    }
+}
 int main(){
     ios_base::sync_with_stdio(false);
     int qtd;
     cin >> qtd;
-    vector <jogador> jogadores ;
-    vector <int> tempoINT;
+    vector <jogador> jogadores(qtd) ;
     for (int i = 0; i <qtd; i++){
         string nick, tempo;
         cin >> nick >> tempo;
-        jogadores.emplace_back(nick, tempo);
+
+        int min = stoi(tempo.substr(0, 2));
+        int seg = stoi(tempo.substr(3,2));
+        int tempoSeg = min * 60 + seg;
+
+        jogadores[i] = {nick, tempo, tempoSeg};
     }
+
     sort(jogadores.begin(), jogadores.end(), compararTempo);
 
     for (int i = 0; i < qtd; ++i) {
