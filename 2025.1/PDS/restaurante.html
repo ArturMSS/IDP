@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Restaurante</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header><h1>Restaurante</h1></header>
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="reservas.html">Reservas</a>
+    <a href="checkin.html">Check-in / Check-out</a>
+    <a href="quartos.html">Quartos</a>
+    <a href="restaurante.html">Restaurante</a>
+    <a href="limpeza.html">Limpeza</a>
+    <a href="relatorios.html">Relatórios</a>
+  </nav>
+  <div class="container">
+    <div class="card">
+      <h2>Reserva de Mesa</h2>
+      <form onsubmit="reservarMesa(event)">
+        <label>Nome:</label>
+        <input type="text" id="nomeMesa" required />
+        <label>Quarto (1-30):</label>
+        <input type="number" id="quarto" min="1" max="30" required />
+        <label>Número de pessoas:</label>
+        <input type="number" id="pessoas" min="1" max="5" required />
+        <label>Horário:</label>
+        <input type="time" id="horaMesa" required />
+        <button type="submit">Reservar</button>
+      </form>
+      <h2>Feedback</h2>
+      <form onsubmit="enviarFeedback(event)">
+        <label>Comentário:</label>
+        <textarea id="comentario" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+      <ul id="feedbacks"></ul>
+    </div>
+  </div>
+  <footer><p>&copy; 2025 Hotel Rio</p></footer>
+  <script>
+    function reservarMesa(e) {
+      e.preventDefault();
+      alert("Reserva realizada com sucesso!");
+      e.target.reset();
+    }
+
+    function enviarFeedback(e) {
+      e.preventDefault();
+      const comentario = document.getElementById("comentario").value;
+      const li = document.createElement("li");
+      li.textContent = comentario;
+      document.getElementById("feedbacks").appendChild(li);
+      e.target.reset();
+    }
+  </script>
+</body>
+</html>

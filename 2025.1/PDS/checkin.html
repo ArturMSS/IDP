@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Check-in / Check-out</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header><h1>Check-in / Check-out</h1></header>
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="reservas.html">Reservas</a>
+    <a href="checkin.html">Check-in / Check-out</a>
+    <a href="quartos.html">Quartos</a>
+    <a href="restaurante.html">Restaurante</a>
+    <a href="limpeza.html">Limpeza</a>
+    <a href="relatorios.html">Relatórios</a>
+  </nav>
+  <div class="container">
+    <div class="card">
+      <h2>Registrar Check-in</h2>
+      <form onsubmit="registrarCheckin(event)">
+        <label>Nome:</label>
+        <input type="text" id="nomeCheckin" required />
+        <label>CPF:</label>
+        <input type="text" id="CPFCheckin" required />
+        <button type="submit">Check-in</button>
+      </form>
+      <h2>Registrar Check-out</h2>
+      <form onsubmit="registrarCheckout(event)">
+        <label>Nome:</label>
+        <input type="text" id="nomeCheckout" required />
+        <label>CPF:</label>
+        <input type="text" id="CPFCheckout" required />
+        <button type="submit">Check-out</button>
+      </form>
+      <h3>Status Atual</h3>
+      <ul id="listaCheckin"></ul>
+    </div>
+  </div>
+  <footer><p>&copy; 2025 Hotel Rio</p></footer>
+  <script>
+    const listaCheckin = document.getElementById('listaCheckin');
+    const hospedes = [];
+
+    function registrarCheckin(e) {
+      e.preventDefault();
+      const nome = document.getElementById('nomeCheckin').value;
+      hospedes.push(nome);
+      atualizarLista();
+      e.target.reset();
+    }
+
+    function registrarCheckout(e) {
+      e.preventDefault();
+      const nome = document.getElementById('nomeCheckout').value;
+      const index = hospedes.indexOf(nome);
+      if (index > -1) {
+        hospedes.splice(index, 1);
+        atualizarLista();
+      }
+      e.target.reset();
+    }
+
+    function atualizarLista() {
+      listaCheckin.innerHTML = '';
+      hospedes.forEach(nome => {
+        const li = document.createElement('li');
+        li.textContent = nome;
+        listaCheckin.appendChild(li);
+      });
+    }
+  </script>
+</body>
+</html>

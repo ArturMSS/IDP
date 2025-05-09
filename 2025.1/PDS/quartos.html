@@ -1,0 +1,89 @@
+[quartos.html]
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quartos - Hotel Rio</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .grid-quartos {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .quarto {
+      width: 100%;
+      padding: 20px;
+      text-align: center;
+      border-radius: 8px;
+      cursor: pointer;
+      background-color: #bde0fe;
+    }
+    .quarto.ocupado {
+      background-color: #ff6b6b;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Hotel Rio - Sistema de Gestão</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="reservas.html">Reservas</a>
+    <a href="checkin.html">Check-in / Check-out</a>
+    <a href="quartos.html">Quartos</a>
+    <a href="restaurante.html">Restaurante</a>
+    <a href="limpeza.html">Limpeza</a>
+    <a href="relatorios.html">Relatórios</a>
+  </nav>
+
+  <div class="container">
+    <div class="card">
+      <h2>Gestão de Quartos</h2>
+      <p>Clique em um quarto disponível para gerenciar.</p>
+      <div class="grid-quartos">
+        <!-- Quartos de 1 a 30 -->
+        <div class="quarto">1</div>
+        <div class="quarto ocupado">2</div>
+        <div class="quarto">3</div>
+        <div class="quarto ocupado">4</div>
+        <div class="quarto">5</div>
+        <div class="quarto">6</div>
+        <div class="quarto ocupado">7</div>
+        <div class="quarto">8</div>
+        <div class="quarto">9</div>
+        <div class="quarto ocupado">10</div>
+        <div class="quarto">11</div>
+        <div class="quarto">12</div>
+        <div class="quarto ocupado">13</div>
+        <div class="quarto">14</div>
+        <div class="quarto">15</div>
+        <div class="quarto">16</div>
+        <div class="quarto ocupado">17</div>
+        <div class="quarto">18</div>
+        <div class="quarto">19</div>
+        <div class="quarto ocupado">20</div>
+        <div class="quarto">21</div>
+        <div class="quarto">22</div>
+        <div class="quarto ocupado">23</div>
+        <div class="quarto">24</div>
+        <div class="quarto">25</div>
+        <div class="quarto">26</div>
+        <div class="quarto ocupado">27</div>
+        <div class="quarto">28</div>
+        <div class="quarto">29</div>
+        <div class="quarto ocupado">30</div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Hotel Rio - Todos os direitos reservados</p>
+  </footer>
+</body>
+</html>
