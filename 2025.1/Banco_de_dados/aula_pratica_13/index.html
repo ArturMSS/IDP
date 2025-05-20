@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Painel Interativo - Mercado Automotivo</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Referência ao arquivo CSS -->
+</head>
+<body>
+<header>
+    Painel Interativo do Mercado Automotivo
+</header>
+<main>
+    <section class="filters" aria-label="Filtros para análise">
+        <label for="filter-marca">Marca
+            <select id="filter-marca" aria-controls="tabela-carros"></select>
+        </label>
+        <label for="filter-litragem">Litragem do Motor
+            <select id="filter-litragem" aria-controls="tabela-carros"></select>
+        </label>
+        <label for="filter-ano">Ano do Carro
+            <select id="filter-ano" aria-controls="tabela-carros"></select>
+        </label>
+        <label for="filter-combustivel">Tipo de Combustível
+            <select id="filter-combustivel" aria-controls="tabela-carros"></select>
+        </label>
+        <label for="filter-cambio">Tipo de Câmbio
+            <select id="filter-cambio" aria-controls="tabela-carros"></select>
+        </label>
+    </section>
+
+    <section class="indicators" aria-label="Indicadores">
+        <div class="indicator" id="indicador-preco-medio" aria-live="polite">
+            <h3>Preço Médio</h3>
+            <p>R$ 0,00</p>
+        </div>
+        <div class="indicator" id="indicador-quantidade-marcas" aria-live="polite">
+            <h3>Quantidade média de Carros por Marca</h3>
+            <p>0</p>
+        </div>
+    </section>
+
+    <section aria-label="Tabela de carros">
+        <table id="tabela-carros" role="grid" aria-describedby="Tabela de carros filtrados">
+            <thead>
+                <tr>
+                    <th data-col="nome_marca">Marca</th>
+                    <th data-col="nome_modelo">Modelo</th>
+                    <th data-col="ano">Ano</th>
+                    <th data-col="litros">Litragem</th>
+                    <th data-col="tipo_combustivel">Combustível</th>
+                    <th data-col="tipo_cambio">Câmbio</th>
+
+                    <th data-col="proprietarios">Proprietários</th>
+                    <th data-col="portas">Portas</th>
+                    <th data-col="quilometragem">Quilometragem</th>
+                    <th data-col="preco">Preço (R$)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Linhas serão inseridas via JS -->
+            </tbody>
+        </table>
+        <div id="indicador-paginas" aria-live="polite">
+            <p>Mostrando <span id="faixa-inicial">1</span>-<span id="faixa-final">50</span> de <span id="total-resultados">0</span> resultados</p>
+        </div>
+    </section>
+
+    <!-- Botões de Navegação -->
+    <div>
+        <button id="btn-anterior">Anterior</button>
+        <button id="btn-proximo">Próximo</button>
+    </div>
+
+    <section class="charts" aria-label="Gráficos de análise">
+        <div class="chart-container">
+            <h4>Preço Médio por Marca</h4>
+            <div id="chart-preco-marca" style="width: 100%; height: 300px;"></div>
+        </div>
+        <div class="chart-container">
+            <h4>Quantidade de Carros por Ano</h4>
+            <div id="chart-quantidade-ano" style="width: 100%; height: 300px;"></div>
+        </div>
+        <div class="chart-container">
+            <h4>Distribuição por Litragem do Motor</h4>
+            <div id="chart-litragem" style="width: 100%; height: 300px;"></div>
+        </div>
+    </section>
+</main>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="script.js"></script> <!-- Referência ao arquivo JS -->
+</body>
+</html>
