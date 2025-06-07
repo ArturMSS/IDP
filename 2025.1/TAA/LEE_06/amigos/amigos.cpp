@@ -4,7 +4,6 @@ int N;
 vector<int> G[801];
 vector<bool> visitados(801);
 
-
 void dfs(int u, int origem){
     visitados[u] = true; 
 
