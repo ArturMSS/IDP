@@ -5,9 +5,9 @@ vector<int> G[801];
 vector<bool> visitados(801);
 
 void dfs(int u, int origem){
-    visitados[u] = true; 
+    visitados[u] = true;
 
-    for(auto v:G[u]){
+    for(auto v : G[u]){
         if(!visitados[v]){
             dfs(v, u);
         }
