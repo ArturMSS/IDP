@@ -23,8 +23,6 @@ void liberarOrgao(Orgao** orgao) {
     *orgao = NULL; // Atualiza o ponteiro no escopo chamador
 }
 
-
-
 // Funções para manipulação de pilhas
 void inicializarPilha(Pilha* pilha) {
     pilha->topo = NULL;
