@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
+
 bool ehprimo(int n){
     bool primo = true;
     if (n == 1){
