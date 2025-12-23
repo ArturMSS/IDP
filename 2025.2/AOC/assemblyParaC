@@ -1,0 +1,17 @@
+slli x30, x28, 2    # x30 = i * 4
+add  x30, x10, x30  # x30 = &A[i]
+slli x31, x29, 2    # x31 = j * 4
+add  x31, x10, x31  # x31 = &A[j]
+lw   x5, 0(x30)     # f = A[i]
+lw   x6, 0(x31)     # g = A[j]
+add  x7, x5, x6     # h = f + g
+sw   x7, 32(x11)    # B[8] = h
+
+
+f = A[i];
+g = A[j];
+h = f + g;
+B[8] = h;
+
+// Ou de forma mais concisa:
+B[8] = A[i] + A[j];
